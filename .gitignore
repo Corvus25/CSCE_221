@@ -1,0 +1,20 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+# Ignore Stuff
+cmake-build-debug/
+Homework/
+Labs/
+Exam*/
+valgrind*
+.idea/
+*.DS_Store
+*.exe
+*.pem
+CMakeLists.txt
