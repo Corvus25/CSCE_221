@@ -9,11 +9,17 @@
 
 # Ignore Stuff
 cmake-build-debug/
-Homework/
-Labs/
-Exam*/
 valgrind*
 .idea/
+*.pdf
+*.sh
+
+Cultural/
+HW/
+Template/
+Labs/
+Exam*/
+Google_tests/
 *.DS_Store
 *.exe
 *.pem
