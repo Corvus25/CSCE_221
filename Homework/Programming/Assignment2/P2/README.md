@@ -10,12 +10,12 @@
 I certify that I have listed all the sources that I used to develop the solutions and code to the submitted work.
 On my honor as an Aggie, I have neither given nor received any unauthorized help on this academic work.
 
-Sean Wangnick - 2/17/2020
+Sean Wangnick - 2/28/2020
 
 ### Resources
 - Some "Stack Overflow" sites to reference some syntactical C++ stuff.
-- Previous work from CSCE 121 DLL homework, including the `to_str()` function.
-- Dr. Leyk's DLL slides.
+- Previous work from CSCE 121 DLL homework
+- Dr. Leyk's DLL slides
 
 ### Known Issues
 When `make`ing the executable, the compiler throws warnings referring to a dereferenced pointer being compared to
@@ -28,20 +28,18 @@ However, the executable still compiles fine and this does not affect the behavio
 of this assignment, does not warrant a fix.
 
 ### Description
-This implementation of a Doubly Linked List class does pretty much exactly what the name suggests. A `DLList` class
-is defined by functions that allow the instantiation, copying, moving, and traversal of a Doubly Linked Lists. The
-nodes of the DLL are defined by the struct `DLListNode`, which defines an object to store, and pointers to the
-previous and next node. This implementation of the DLL and its nodes only support data of type `int`.
+This implementation of a templated Doubly Linked List class is an extension of the original `DLList`. This version of 
+the DLL and its nodes support all relevant data types, even user-defined ones. This simply allows the nodes of the DLL
+to contain other data that is not of type `int`.
 
 ### Testing
-The DLL implementation is tested by the functions in `DLList-main.cpp`. Various tests are performed to verify the
-correctness of the implementation, including (but not limited to) creating an empty list, adding nodes, removing nodes,
-copying and moving to other lists via the constructors and assignment operators, inserting and removing before and after
-in various positions to show that the `next` and `prev` pointers remain consistent in every case, and traversing
-backwards.
+As an extension of Part 1, it is assumed that all relevant testing of the functions is performed in Part 1. The only
+additional testing required for the templated implementation is to introduce other data types to fill the nodes.
+`TDLList-main.cpp` accomplishes this by testing data of type `string`, and the class continues to function as intended. 
 
 #### Exceptions
-Additional exceptions were added simply to have the ability to differentiate between different types of DLL errors.
+The exceptions of the templated class match the exceptions of the untemplated class.
+
 - `EmptyDLList` - thrown when an attempted operation on a list would be invalid because it is empty. 
 - `InvalidInsertion` - thrown when the insertion of a node would be out of bounds of the DLL.
 - `InvalidRemoval` - thrown when the removal of a node would be out of bounds of the DLL.
