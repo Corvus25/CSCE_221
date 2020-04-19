@@ -13,6 +13,7 @@ valgrind*
 .idea/
 *.pdf
 *.sh
+*.ppt
 
 Cultural/
 HW/
